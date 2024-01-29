@@ -1,25 +1,14 @@
-*{
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-.outer{
-  background-color: #eac9c9;
-  background-image: url("src/assets/images/pexels-steve-johnson-1550564.jpg");
-  background-size: 100%;
-  background-position: center;
-  background-repeat: repeat;
-  min-height: 800px;
-}
-
-.title{
-  text-align: center;
+.title {
+  margin: auto;
   font-family: 'Oswald', sans-serif;
   font-size: 2.5em;
-  font-weight: 600;
   background-color: #ee9393;
   border-radius: 5px;
+}
+
+.categories {
+  display: flex;
+  flex-direction: row;
 }
 
 .btn{
@@ -30,7 +19,6 @@
   background-color: red;
   font-family: 'Oswald', sans-serif;
 }
-
 .counter{
   width: 500px;
   border-radius: 8px;

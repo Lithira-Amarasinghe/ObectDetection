@@ -1,0 +1,16 @@
+<div class="outer">
+  <div class="title">Trowell - e-commerce</div>
+  <div class="categories">
+<!--    <div class="counter">-->
+<!--      <div>Count: {{counterService.counter}} </div>-->
+<!--      <button class="btn" (click)="counterService.increment()">increment</button>-->
+<!--      <button class="btn" (click)="counterService.decrement()">decrement</button>-->
+<!--    </div>-->
+    <app-product-category [products]="electronics">
+      <ng-container>Electronics</ng-container>
+    </app-product-category>
+    <app-product-category [products]="clothing">
+      <div>Clothing</div>
+    </app-product-category>
+  </div>
+</div>

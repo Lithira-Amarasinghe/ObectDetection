@@ -1,0 +1,24 @@
+<div class="outer">
+  <div class="title">Camera view</div>
+  <button class="btn" (click)="enumerateCameras()">start</button>
+  <button class="btn" (click)="stop()">stop</button>
+  <select [(ngModel)]="selectedCamera" (change)="onCameraChange()">
+    <option *ngFor="let camera of availableCameras" [ngValue]="camera.deviceId">{{ camera.label }}</option>
+  </select>
+  <div class="video-outer" #videoOuter>
+    <video #cameraFeed autoplay></video>
+  </div>
+
+  <div class="test-providers">{{tt}}</div>
+
+    <div class="capture-outer">
+      <button (click)="captureImage()">Capture Image</button>
+      <canvas #canvasElement></canvas>
+      <img *ngIf="capturedImage" [src]="capturedImage" alt="Captured Image">
+    </div>
+
+  <div class="detected-items-outer">
+    <div #item (click)="copyText(item.innerText)" *ngFor="let pred of predictions">{{pred.class}}</div>
+    <div>Text</div>
+  </div>
+</div>
